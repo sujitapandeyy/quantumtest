@@ -1,9 +1,10 @@
 import axios from "axios";
 import Link from "next/link";
-const res=await axios.get("https://jsonplaceholder.typicode.com/posts")
-const response=res.data;
 
-export default function Home() {
+
+export default async function Home() {
+  const res=await axios.get("https://jsonplaceholder.typicode.com/posts")
+const response=res.data;
   return (
      <main>
       <div className='container mx-auto p-3' >
